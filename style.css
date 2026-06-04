@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+
+    color: var(--text-color-dark);
+}
+:root{
+    --primary-color-dark: #181818;
+    --secondary-color-dark: #313131;
+    --text-color-dark: #f6f6f7;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc{
+    width: 500px;
+    height: 800px;
+    background: var(--primary-color-dark);
+
+    display: grid;
+    grid-template-rows: 3fr 7fr;
+    border-radius: 15px;
+}
+
+.top{
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    position: relative;
+
+}
+.top>button{
+    height: 30px;
+    flex-shrink: 0;
+}
+.display{
+    flex: 1;
+    gap: 4pxpx;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+}
+#previous-display{
+    width: 100%;
+    font-size: 18px;
+    text-align: right;
+    font-family: "Inter", sans-serif;
+    color: #9c9c9c;
+    height: 24px;
+    line-height: 24px;
+
+}
+#text-box{
+    height: 80px;
+    line-height: 80px;
+    font-size: 80px;
+    text-align: right;
+    color: var(--text-color-dark);
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: text;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+}
+#text-box::placeholder{
+    color: var(--text-color-dark);
+}
+.top::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.186),
+        rgba(255, 255, 255, 0.286),
+        rgba(255, 255, 255, 0.186)
+    );
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 0;
+}
+
+.bottom{
+    /* background: blue; */
+}
