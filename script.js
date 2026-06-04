@@ -9,6 +9,11 @@ function adjustFontSize() {
         fontSize -= 2;
         textBox.style.fontSize = fontSize + 'px';
     }
+
+    textBox.style.lineHeight = fontSize + 'px';
+    textBox.style.paddingTop = (80 - fontSize) + 'px';
 }
 
 textBox.addEventListener('input', adjustFontSize);
+
+

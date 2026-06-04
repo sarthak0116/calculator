@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 body{
@@ -20,7 +21,9 @@ body{
     --text-color-dark: #f6f6f7;
 
 }
-
+button{
+    cursor: pointer;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -54,7 +57,7 @@ body{
 }
 .display{
     flex: 1;
-    gap: 4pxpx;
+    gap: 4px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -71,17 +74,15 @@ body{
 
 }
 #text-box{
+    width: 100%;
     height: 80px;
-    line-height: 80px;
-    font-size: 80px;
     text-align: right;
     color: var(--text-color-dark);
     background: transparent;
     border: none;
     outline: none;
     cursor: text;
-    font-family: "Inter", sans-serif;
-    font-size: 40px;
+    font-size: 60px;
 }
 #text-box::placeholder{
     color: var(--text-color-dark);
@@ -105,4 +106,41 @@ body{
 
 .bottom{
     /* background: blue; */
+}
+.buttons{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 9px;
+    padding: 20px 30px;
+}
+.buttons button{
+    color: var(--text-color-dark);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 20px;
+    transition: background ease .5s;
+}
+
+#btn-0{
+    grid-column: 1/3;
+}
+#btn-equals{
+    grid-column: 4/5;
+    grid-row: 5/7;
+}
+
+.buttons > .btn-highlighted{
+    background: var(--secondary-color-dark);
+    transition: background ease .5s;
+}
+.btn-highlighted:hover{
+    background: rgba(255,255,255,0.25);
+}
+button:hover {
+    background: rgba(255,255,255,0.15);
 }
